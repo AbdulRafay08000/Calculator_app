@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #282c34; /* Dark background */
+}
+
+.Calculator {
+  position: relative;
+  display: grid;
+  gap: 10px; /* Gap between grid items */
+  width: 320px; /* Fixed width for the calculator */
+  padding: 20px;
+
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.Calculator .value {
+  grid-column: span 4;
+  height: 80px; /* Reduced height */
+  text-align: right;
+  padding: 10px;
+  font-size: 24px; /* Larger font size */
+  color: #fff; /* Text color */
+  background-color: #333; /* Darker background */
+  border: none;
+  outline: none;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.Calculator button {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 20px; /* Button text size */
+  color: #fff;
+  background-color: #666; /* Dark button background */
+  border: 1px solid #333; /* Dark border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.Calculator button:hover {
+  background-color: #888; /* Lighter background on hover */
+}
+
+.Calculator button:active {
+  background-color: #4CAF50; /* Greenish active state */
+  color: black; /* Dark text on active */
+}
+
+.Calculator .numclear {
+  background-color: #d32f2f; /* Red clear button */
+}
+
+.Calculator .numclear:hover {
+  background-color: #f44336; /* Lighter red on hover */
+}
+
+.Calculator .plus {
+  grid-row: span 2;
+  height: 120px;
+}
+
+.Calculator .equal {
+  background-color: #ff9800; /* Orange equals button */
+}
+
+.Calculator .equal:hover {
+  background-color: #ffa726; /* Lighter orange on hover */
+}
+
+Calculator.dark {
+  background-color: #444c55; /* Dark background */
+}
+
+.Calculator.light {
+  background-color: #f0f0f0; /* Light background */
+}
+
+/* Add specific styles for dark and light mode buttons as needed */
+.Calculator.dark .mode-toggle {
+  color: #fff;
+  background-color: #333;
+}
+
+.Calculator.light .mode-toggle {
+  color: #333;
+  background-color: #fff;
+}
